@@ -7,4 +7,4 @@ find /etc/services.d -type f -name run -executable -exec {} \; &
 sleep 5
 
 # Execute the original Pi-hole entrypoint/command
-exec "$@"
+/usr/bin/start.sh
