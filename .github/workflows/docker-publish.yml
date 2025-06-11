@@ -14,7 +14,8 @@ on:
     paths:
       - 'Dockerfile'
       - '.github/workflows/docker-publish.yml'
-      - 'pihole-unbound/unbound-pihole.conf'
+      - 'pihole-unbound/*'
+      - 'entrypoint.sh'
 
 env:
   REGISTRY: ghcr.io
