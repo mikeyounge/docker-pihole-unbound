@@ -20,4 +20,8 @@ RUN mkdir -p /var/lib/unbound && \
 # Download the root hints file for unbound
 RUN wget https://www.internic.net/domain/named.root -qO /var/lib/unbound/root.hints
 
-ENTRYPOINT ["start.sh"]
+# Copy and set the custom entrypoint
+COPY entrypoint.sh /
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
