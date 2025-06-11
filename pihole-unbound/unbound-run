@@ -1,6 +1,6 @@
 #!/command/with-contenv bash
 
-s6-echo "Starting unbound"
+echo "Starting unbound"
 
 NAME="unbound"
 DESC="DNS server"
